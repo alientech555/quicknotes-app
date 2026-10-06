@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>QuickNotes</h1>
+        <p>Capture your thoughts, organize your life.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add a note</h2>
+            <form id="note-form">
+                <div>
+                    <label for="note-input">Note:</label>
+                    <input type="text" id="note-input" maxlength="200" required>
+                </div>
+                <div>
+                    <label for="note-category">Category:</label>
+                    <select id="note-category">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="study">Study</option>
+                    </select>
+                </div>
+                <button type="submit">Add Note</button>
+            </form>
+            <p id="error-message"></p>
+        </section>
+
+        <section>
+            <h2>Your notes</h2>
+            <div>
+                <label for="search-input">Search:</label>
+                <input type="text" id="search-input" placeholder="Search notes...">
+            </div>
+            <p id="note-count"></p>
+            <ul id="notes-list"></ul>
+            <button type="button" id="clear-all">Clear all</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 QuickNotes App</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
