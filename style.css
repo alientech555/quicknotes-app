@@ -1,0 +1,167 @@
+/* 1. box-sizing reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Styles for body */
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Styles for header */
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 { margin: 0; }
+header p { margin: 0.5rem 0 0; opacity: 0.8; }
+
+/* Styles for main area */
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* White section cards with rounded corners */
+section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 2. Form laid out with Flexbox */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 150px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+input, select {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+/* 4. Visible :hover style on buttons */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Style the error message in red */
+#error-message {
+    color: red; 
+    font-weight: 600;
+    margin-top: 0.5rem;
+    min-height: 1.2em;
+}
+
+/* 3. Each note styled as a card using padding, border, border-radius and margin */
+#notes-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.note-card {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 5px solid #bdc3c7;
+    background: #fcfcfc;
+}
+
+/* 5. Different visual style for each category using classes */
+.category-personal { border-left-color: teal; }
+.category-work { border-left-color: darkred; }
+.category-study { border-left-color: blue; }
+
+.note-meta {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-actions {
+    margin-top: 0.8rem;
+    text-align: right;
+}
+
+.note-actions button {
+    background-color: #e74c3c;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.note-actions button:hover {
+    background-color: #c0392b;
+}
+
+#clear-all {
+    background-color: #95a5a6;
+    margin-top: 1rem;
+}
+
+#clear-all:hover {
+    background-color: #7f8c8d;
+}
+
+/* Styles for footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #2c3e50;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+/* 6. At least one @media (max-width: 600px) rule */
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    form > div {
+        min-width: 100%;
+    }
+}
